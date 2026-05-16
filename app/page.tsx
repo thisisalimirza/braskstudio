@@ -69,14 +69,7 @@ export default function Home() {
       {/* Nav */}
       <nav className="fixed top-0 left-0 right-0 z-50 bg-[#fafaf9]/90 backdrop-blur-sm border-b border-[#e7e5e4]">
         <div className="max-w-5xl mx-auto px-6 h-14 flex items-center justify-between">
-          <Image
-            src="/BraskStudio-Cropped.png"
-            alt="Brask Studio"
-            width={140}
-            height={36}
-            className="h-7 w-auto"
-            priority
-          />
+          <span className="text-sm font-semibold tracking-tight text-[#111110]">Brask Studio</span>
           <a
             href="#contact"
             style={{ color: NAVY }}
@@ -94,9 +87,9 @@ export default function Home() {
             Websites that make you look as good as you actually are.
           </h1>
           <p className="mt-6 sm:mt-8 text-lg sm:text-xl text-[#6b7280] max-w-xl leading-relaxed font-light">
-            Premium websites for healthcare practices, professional services
-            firms, and early-stage companies that need to look credible fast.
-            Two weeks, flat rate.
+            We build clean, fast marketing sites for healthcare practices,
+            professional services firms, and early-stage companies. Two weeks,
+            flat rate.
           </p>
           <a
             href="#contact"
