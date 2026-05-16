@@ -69,7 +69,14 @@ export default function Home() {
       {/* Nav */}
       <nav className="fixed top-0 left-0 right-0 z-50 bg-[#fafaf9]/90 backdrop-blur-sm border-b border-[#e7e5e4]">
         <div className="max-w-5xl mx-auto px-6 h-14 flex items-center justify-between">
-          <span className="text-sm font-semibold tracking-tight text-[#111110]">Brask Studio</span>
+          <Image
+            src="/BraskStudio-Cropped.png"
+            alt="Brask Studio"
+            width={140}
+            height={36}
+            className="h-7 w-auto"
+            priority
+          />
           <a
             href="#contact"
             style={{ color: NAVY }}
@@ -81,12 +88,12 @@ export default function Home() {
       </nav>
 
       {/* Hero */}
-      <section className="pt-56 pb-40 px-6">
+      <section className="pt-36 pb-20 sm:pt-56 sm:pb-40 px-6">
         <div className="max-w-5xl mx-auto">
-          <h1 className="text-5xl sm:text-6xl md:text-7xl font-bold tracking-tight leading-[1.05] max-w-3xl">
+          <h1 className="text-4xl sm:text-6xl md:text-7xl font-bold tracking-tight leading-[1.05] max-w-3xl">
             Websites that make you look as good as you actually are.
           </h1>
-          <p className="mt-8 text-xl text-[#6b7280] max-w-xl leading-relaxed font-light">
+          <p className="mt-6 sm:mt-8 text-lg sm:text-xl text-[#6b7280] max-w-xl leading-relaxed font-light">
             Premium websites for healthcare practices, professional services
             firms, and early-stage companies that need to look credible fast.
             Two weeks, flat rate.
@@ -94,7 +101,7 @@ export default function Home() {
           <a
             href="#contact"
             style={{ backgroundColor: NAVY }}
-            className="mt-10 inline-flex items-center gap-2.5 text-white text-sm font-medium px-6 py-3 rounded-lg transition-opacity hover:opacity-85"
+            className="mt-8 sm:mt-10 inline-flex items-center gap-2.5 text-white text-sm font-medium px-6 py-3 rounded-lg transition-opacity hover:opacity-85"
           >
             Start a project
             <ArrowRight className="w-4 h-4" />
@@ -103,12 +110,12 @@ export default function Home() {
       </section>
 
       {/* Work */}
-      <section id="work" className="py-24 px-6 border-t border-[#e7e5e4]">
+      <section id="work" className="py-16 sm:py-24 px-6 border-t border-[#e7e5e4]">
         <div className="max-w-5xl mx-auto">
-          <h2 className="text-xs font-semibold uppercase tracking-widest text-[#9ca3af] mb-12">
+          <h2 className="text-xs font-semibold uppercase tracking-widest text-[#9ca3af] mb-8 sm:mb-12">
             Work
           </h2>
-          <div className="grid grid-cols-1 sm:grid-cols-2 gap-6">
+          <div className="grid grid-cols-1 sm:grid-cols-2 gap-5 sm:gap-6">
             {projects.map((project) => (
               <a
                 key={project.name}
@@ -117,7 +124,7 @@ export default function Home() {
                 rel="noopener noreferrer"
                 className="group block rounded-2xl overflow-hidden border border-[#e7e5e4] hover:border-[#cbd5e1] transition-all duration-200 shadow-sm hover:shadow-md"
               >
-                <div className="relative h-52 bg-[#f3f4f6] overflow-hidden">
+                <div className="relative h-44 sm:h-52 bg-[#f3f4f6] overflow-hidden">
                   <Image
                     src={project.image}
                     alt={project.name}
@@ -126,14 +133,14 @@ export default function Home() {
                     sizes="(max-width: 640px) 100vw, 50vw"
                   />
                 </div>
-                <div className="p-5 bg-white">
+                <div className="p-4 sm:p-5 bg-white">
                   <div className="flex items-center justify-between mb-2">
                     <span className="text-sm font-semibold text-[#111110]">{project.name}</span>
                     <span className="text-xs text-[#6b7280] bg-[#f3f4f6] px-2.5 py-1 rounded-full font-medium">
                       {project.label}
                     </span>
                   </div>
-                  <p className="text-[0.9375rem] text-[#4b5563] leading-relaxed">{project.description}</p>
+                  <p className="text-sm sm:text-[0.9375rem] text-[#4b5563] leading-relaxed">{project.description}</p>
                 </div>
               </a>
             ))}
@@ -142,12 +149,12 @@ export default function Home() {
       </section>
 
       {/* How It Works */}
-      <section id="process" className="py-24 px-6 border-t border-[#e7e5e4]">
+      <section id="process" className="py-16 sm:py-24 px-6 border-t border-[#e7e5e4]">
         <div className="max-w-5xl mx-auto">
-          <h2 className="text-xs font-semibold uppercase tracking-widest text-[#9ca3af] mb-12">
+          <h2 className="text-xs font-semibold uppercase tracking-widest text-[#9ca3af] mb-8 sm:mb-12">
             How it works
           </h2>
-          <div className="grid grid-cols-1 sm:grid-cols-3 gap-10 mb-10">
+          <div className="grid grid-cols-1 sm:grid-cols-3 gap-8 sm:gap-10 mb-8 sm:mb-10">
             {steps.map((step, i) => (
               <div key={step.week}>
                 <div className="flex items-center gap-3 mb-3">
@@ -172,9 +179,9 @@ export default function Home() {
       </section>
 
       {/* Pricing */}
-      <section id="pricing" className="py-24 px-6 border-t border-[#e7e5e4]">
+      <section id="pricing" className="py-16 sm:py-24 px-6 border-t border-[#e7e5e4]">
         <div className="max-w-5xl mx-auto">
-          <h2 className="text-xs font-semibold uppercase tracking-widest text-[#9ca3af] mb-12">
+          <h2 className="text-xs font-semibold uppercase tracking-widest text-[#9ca3af] mb-8 sm:mb-12">
             Pricing
           </h2>
           <div className="max-w-xl">
@@ -191,16 +198,16 @@ export default function Home() {
       </section>
 
       {/* About */}
-      <section id="about" className="py-24 px-6 border-t border-[#e7e5e4]">
+      <section id="about" className="py-16 sm:py-24 px-6 border-t border-[#e7e5e4]">
         <div className="max-w-5xl mx-auto">
           <h2 className="text-xs font-semibold uppercase tracking-widest text-[#9ca3af] mb-4">
             About
           </h2>
-          <p className="text-2xl font-bold tracking-tight mb-10">
+          <p className="text-xl sm:text-2xl font-bold tracking-tight mb-8 sm:mb-10">
             Domain expertise matters.
           </p>
           <div className="max-w-2xl">
-            <p className="text-[#374151] leading-relaxed text-xl font-light">
+            <p className="text-[#374151] leading-relaxed text-lg sm:text-xl font-light">
               I&apos;m Ali — MS3 at UConn, founder, and software engineer. I&apos;ve been
               building on the web for years and I care way too much about things
               loading fast and looking right. I work with a small number of
@@ -213,16 +220,16 @@ export default function Home() {
       </section>
 
       {/* Contact */}
-      <section id="contact" className="py-24 px-6 border-t border-[#e7e5e4]">
+      <section id="contact" className="py-16 sm:py-24 px-6 border-t border-[#e7e5e4]">
         <div className="max-w-5xl mx-auto">
-          <h2 className="text-xs font-semibold uppercase tracking-widest text-[#9ca3af] mb-12">
+          <h2 className="text-xs font-semibold uppercase tracking-widest text-[#9ca3af] mb-8 sm:mb-12">
             Contact
           </h2>
           <div className="max-w-xl">
-            <p className="text-[#374151] leading-relaxed text-lg mb-10">
+            <p className="text-[#374151] leading-relaxed text-lg mb-8 sm:mb-10">
               Ready to start? Fill out the form below and I&apos;ll get back to you
               within 24 hours.
-            </p>
+          </p>
             <form
               action="https://formspree.io/f/placeholder"
               method="POST"
@@ -275,7 +282,7 @@ export default function Home() {
               <button
                 type="submit"
                 style={{ backgroundColor: NAVY }}
-                className="inline-flex items-center gap-2 text-white text-sm font-medium px-6 py-3 rounded-lg transition-opacity hover:opacity-85"
+                className="w-full sm:w-auto inline-flex items-center justify-center gap-2 text-white text-sm font-medium px-6 py-3 rounded-lg transition-opacity hover:opacity-85"
               >
                 <Mail className="w-4 h-4" />
                 Send message
