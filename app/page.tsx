@@ -11,7 +11,7 @@ const projects = [
   },
   {
     name: "Sitr",
-    description: "Shift management and scheduling platform for healthcare teams.",
+    description: "High-capacity seating and event management platform built for medical institutions.",
     url: "https://usesitr.com",
     label: "Healthcare SaaS",
     image: "/portfolio/sitr.jpeg",
@@ -30,6 +30,20 @@ const projects = [
     label: "Healthcare Community",
     image: "/portfolio/mdplus.png",
   },
+  {
+    name: "Byline",
+    description: "Clean publishing platform for writers who want to own their audience.",
+    url: "https://bylineblogs.com/",
+    label: "SaaS",
+    image: "/portfolio/byline.jpeg",
+  },
+  {
+    name: "Supertasks",
+    description: "Minimal task management app designed for focus over features.",
+    url: "https://supertasks-app.vercel.app/",
+    label: "Productivity",
+    image: "/portfolio/Supertasks.png",
+  },
 ];
 
 const steps = [
@@ -47,11 +61,11 @@ export default function Home() {
       {/* Nav */}
       <nav className="fixed top-0 left-0 right-0 z-50 bg-[#fafaf9]/90 backdrop-blur-sm border-b border-[#e7e5e4]">
         <div className="max-w-5xl mx-auto px-6 h-14 flex items-center justify-between">
-          <span className="text-sm font-semibold tracking-tight">Brask Studio</span>
+          <span className="text-sm font-semibold tracking-tight text-[#111110]">Brask Studio</span>
           <a
             href="#contact"
             style={{ color: NAVY }}
-            className="text-sm font-medium transition-opacity hover:opacity-70"
+            className="text-sm font-semibold transition-opacity hover:opacity-70"
           >
             Get in touch
           </a>
@@ -111,7 +125,7 @@ export default function Home() {
                       {project.label}
                     </span>
                   </div>
-                  <p className="text-sm text-[#6b7280] leading-relaxed">{project.description}</p>
+                  <p className="text-[0.9375rem] text-[#4b5563] leading-relaxed">{project.description}</p>
                 </div>
               </a>
             ))}
