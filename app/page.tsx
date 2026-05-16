@@ -4,42 +4,42 @@ import { ArrowRight, Mail } from "lucide-react";
 const projects = [
   {
     name: "Rounds",
-    description: "Clinical reasoning platform used at 40+ medical schools across the US.",
+    description: "Production-grade clinical reasoning platform deployed at 40+ medical schools. Built to handle real patient data at scale.",
     url: "https://getrounds.app",
     label: "Healthcare SaaS",
     image: "/portfolio/rounds.jpeg",
   },
   {
     name: "Sitr",
-    description: "High-capacity seating and event management platform built for medical institutions.",
+    description: "High-capacity seating and event management platform built for medical institutions running 500+ person events.",
     url: "https://usesitr.com",
     label: "Healthcare SaaS",
     image: "/portfolio/sitr.jpeg",
   },
   {
     name: "Medical Innovation Podcast",
-    description: "Brand and web presence for a leading healthcare innovation podcast.",
+    description: "Brand identity and full web presence for one of healthcare's leading innovation podcasts.",
     url: "https://medicalinnovationpod.com/",
     label: "Media",
     image: "/portfolio/medicalinnovationpodcast.png",
   },
   {
     name: "MD+",
-    description: "Full website redesign for a nonprofit community of 5,000+ medical student and physician-innovators.",
+    description: "Full redesign for a nonprofit serving 5,000+ medical students and physician-innovators across the US.",
     url: "https://mdplus-nine.vercel.app/",
     label: "Healthcare Community",
     image: "/portfolio/mdplus.png",
   },
   {
     name: "Byline",
-    description: "Clean publishing platform for writers who want to own their audience.",
+    description: "Clean publishing platform for writers who want to own their audience and skip the algorithm.",
     url: "https://bylineblogs.com/",
     label: "SaaS",
     image: "/portfolio/byline.jpeg",
   },
   {
     name: "Supertasks",
-    description: "Minimal task management app designed for focus over features.",
+    description: "Minimal task management app built around deep focus — no bloat, no noise.",
     url: "https://supertasks-app.vercel.app/",
     label: "Productivity",
     image: "/portfolio/Supertasks.png",
@@ -47,13 +47,21 @@ const projects = [
 ];
 
 const steps = [
-  { week: "Week 1", description: "You send content. I build." },
-  { week: "Week 2", description: "We refine. We launch." },
-  { week: "Ongoing", description: "Optional retainer for edits and updates." },
+  {
+    week: "Week 1",
+    description: "You send content. I build the core architecture and design.",
+  },
+  {
+    week: "Week 2",
+    description: "We refine, test, and launch. Guaranteed.",
+  },
+  {
+    week: "Ongoing",
+    description: "Optional retainer for edits and updates.",
+  },
 ];
 
 const NAVY = "#0F1B2D";
-const NAVY_HOVER = "#162438";
 
 export default function Home() {
   return (
@@ -139,7 +147,7 @@ export default function Home() {
           <h2 className="text-xs font-semibold uppercase tracking-widest text-[#9ca3af] mb-12">
             How it works
           </h2>
-          <div className="grid grid-cols-1 sm:grid-cols-3 gap-10">
+          <div className="grid grid-cols-1 sm:grid-cols-3 gap-10 mb-10">
             {steps.map((step, i) => (
               <div key={step.week}>
                 <div className="flex items-center gap-3 mb-3">
@@ -157,6 +165,9 @@ export default function Home() {
               </div>
             ))}
           </div>
+          <p className="text-sm text-[#6b7280] border-t border-[#e7e5e4] pt-6">
+            No hidden fees. No endless email chains. A clear scope from day one and a launch date you can count on.
+          </p>
         </div>
       </section>
 
@@ -182,9 +193,12 @@ export default function Home() {
       {/* About */}
       <section id="about" className="py-24 px-6 border-t border-[#e7e5e4]">
         <div className="max-w-5xl mx-auto">
-          <h2 className="text-xs font-semibold uppercase tracking-widest text-[#9ca3af] mb-12">
+          <h2 className="text-xs font-semibold uppercase tracking-widest text-[#9ca3af] mb-4">
             About
           </h2>
+          <p className="text-2xl font-bold tracking-tight mb-10">
+            Domain expertise matters.
+          </p>
           <div className="max-w-2xl">
             <p className="text-[#374151] leading-relaxed text-xl font-light">
               I&apos;m Ali — MS3 at UConn, founder, and software engineer. I&apos;ve been
