@@ -59,7 +59,7 @@ export default function Home() {
       </nav>
 
       {/* Hero */}
-      <section className="pt-48 pb-40 px-6">
+      <section className="pt-56 pb-40 px-6">
         <div className="max-w-5xl mx-auto">
           <h1 className="text-5xl sm:text-6xl md:text-7xl font-bold tracking-tight leading-[1.05] max-w-3xl">
             Websites that make you look as good as you actually are.
@@ -171,7 +171,7 @@ export default function Home() {
           <h2 className="text-xs font-semibold uppercase tracking-widest text-[#9ca3af] mb-12">
             About
           </h2>
-          <div className="max-w-xl">
+          <div className="max-w-2xl">
             <p className="text-[#374151] leading-relaxed text-xl font-light">
               I&apos;m Ali — MS3 at UConn, founder, and software engineer. I&apos;ve been
               building on the web for years and I care way too much about things
@@ -232,7 +232,7 @@ export default function Home() {
               </div>
               <div>
                 <label htmlFor="message" className="block text-sm font-medium mb-2 text-[#374151]">
-                  What are you building?
+                  What do you need?
                 </label>
                 <textarea
                   id="message"
@@ -259,18 +259,10 @@ export default function Home() {
 
       {/* Footer */}
       <footer className="py-8 px-6 border-t border-[#e7e5e4]">
-        <div className="max-w-5xl mx-auto flex items-center justify-between">
+        <div className="max-w-5xl mx-auto">
           <span className="text-sm text-[#9ca3af]">
             © {new Date().getFullYear()} Brask Studio
           </span>
-          <a
-            href="https://linkedin.com/in/thisisalimirza"
-            target="_blank"
-            rel="noopener noreferrer"
-            className="text-sm text-[#9ca3af] hover:text-[#111110] transition-colors"
-          >
-            LinkedIn
-          </a>
         </div>
       </footer>
     </div>
