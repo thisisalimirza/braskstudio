@@ -1,26 +1,34 @@
+import Image from "next/image";
 import { ArrowRight, Mail } from "lucide-react";
 
 const projects = [
   {
     name: "Rounds",
     description: "Clinical reasoning platform used at 40+ medical schools across the US.",
-    url: "https://rounds.care",
+    url: "https://getrounds.app",
     label: "Healthcare SaaS",
-    accent: "#1a3a5c",
+    image: "/portfolio/rounds.jpeg",
+  },
+  {
+    name: "Sitr",
+    description: "Shift management and scheduling platform for healthcare teams.",
+    url: "https://usesitr.com",
+    label: "Healthcare SaaS",
+    image: "/portfolio/sitr.jpeg",
+  },
+  {
+    name: "Medical Innovation Podcast",
+    description: "Brand and web presence for a leading healthcare innovation podcast.",
+    url: "https://medicalinnovationpod.com/",
+    label: "Media",
+    image: "/portfolio/medicalinnovationpodcast.png",
   },
   {
     name: "MD+",
     description: "Full website redesign for a nonprofit community of 5,000+ medical student and physician-innovators.",
-    url: "https://mdplus.community",
+    url: "https://mdplus-nine.vercel.app/",
     label: "Healthcare Community",
-    accent: "#0f2d1f",
-  },
-  {
-    name: "Brask Group",
-    description: "Brand and web presence for a healthcare infrastructure holding company.",
-    url: "https://braskgroup.com",
-    label: "Holding Company",
-    accent: "#1c1a2e",
+    image: "/portfolio/mdplus.png",
   },
 ];
 
@@ -78,7 +86,7 @@ export default function Home() {
           <h2 className="text-xs font-semibold uppercase tracking-widest text-[#9ca3af] mb-12">
             Work
           </h2>
-          <div className="grid grid-cols-1 sm:grid-cols-3 gap-6">
+          <div className="grid grid-cols-1 sm:grid-cols-2 gap-6">
             {projects.map((project) => (
               <a
                 key={project.name}
@@ -87,13 +95,14 @@ export default function Home() {
                 rel="noopener noreferrer"
                 className="group block rounded-2xl overflow-hidden border border-[#e7e5e4] hover:border-[#cbd5e1] transition-all duration-200 shadow-sm hover:shadow-md"
               >
-                <div
-                  className="h-48 flex items-end p-6"
-                  style={{ backgroundColor: project.accent }}
-                >
-                  <span className="text-3xl font-bold tracking-tight text-white leading-none">
-                    {project.name}
-                  </span>
+                <div className="relative h-52 bg-[#f3f4f6] overflow-hidden">
+                  <Image
+                    src={project.image}
+                    alt={project.name}
+                    fill
+                    className="object-cover object-top transition-transform duration-300 group-hover:scale-[1.02]"
+                    sizes="(max-width: 640px) 100vw, 50vw"
+                  />
                 </div>
                 <div className="p-5 bg-white">
                   <div className="flex items-center justify-between mb-2">
