@@ -4,42 +4,42 @@ import { ArrowRight, Mail } from "lucide-react";
 const projects = [
   {
     name: "Rounds",
-    description: "Production-grade clinical reasoning platform deployed at 40+ medical schools. Built to handle real patient data at scale.",
+    description: "Clinical reasoning platform used by 40+ medical schools across the US. Built for the workflows real clinicians actually use.",
     url: "https://getrounds.app",
     label: "Healthcare SaaS",
     image: "/portfolio/rounds.jpeg",
   },
   {
     name: "Sitr",
-    description: "High-capacity seating and event management platform built for medical institutions running 500+ person events.",
+    description: "Replaced manual spreadsheets with a real-time seating platform built for high-stakes medical school events at scale.",
     url: "https://usesitr.com",
     label: "Healthcare SaaS",
     image: "/portfolio/sitr.jpeg",
   },
   {
     name: "Medical Innovation Podcast",
-    description: "Brand identity and full web presence for one of healthcare's leading innovation podcasts.",
+    description: "Built a brand and web presence that matches the credibility of the guests — physicians, founders, and researchers.",
     url: "https://medicalinnovationpod.com/",
     label: "Media",
     image: "/portfolio/medicalinnovationpodcast.png",
   },
   {
     name: "MD+",
-    description: "Full redesign for a nonprofit serving 5,000+ medical students and physician-innovators across the US.",
+    description: "Built a scalable identity and platform for a 5,000-member community of medical student and physician-innovators.",
     url: "https://mdplus-nine.vercel.app/",
     label: "Healthcare Community",
     image: "/portfolio/mdplus.png",
   },
   {
     name: "Byline",
-    description: "Clean publishing platform for writers who want to own their audience and skip the algorithm.",
+    description: "Clean publishing platform for writers who want to own their audience — no algorithm, no middleman.",
     url: "https://bylineblogs.com/",
     label: "SaaS",
     image: "/portfolio/byline.jpeg",
   },
   {
     name: "Supertasks",
-    description: "Minimal task management app built around deep focus — no bloat, no noise.",
+    description: "Task management stripped to its core. Built for founders who need focus, not another feature list.",
     url: "https://supertasks-app.vercel.app/",
     label: "Productivity",
     image: "/portfolio/Supertasks.png",
@@ -87,9 +87,9 @@ export default function Home() {
             Websites that make you look as good as you actually are.
           </h1>
           <p className="mt-8 text-xl text-[#6b7280] max-w-xl leading-relaxed font-light">
-            We build clean, fast marketing sites for healthcare practices,
-            professional services firms, and early-stage companies. Two weeks,
-            flat rate.
+            Premium websites for healthcare practices, professional services
+            firms, and early-stage companies that need to look credible fast.
+            Two weeks, flat rate.
           </p>
           <a
             href="#contact"
