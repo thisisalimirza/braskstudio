@@ -3,24 +3,24 @@ import { ArrowRight, Mail } from "lucide-react";
 const projects = [
   {
     name: "Rounds",
-    description: "Patient handoff platform for hospital residents.",
+    description: "Clinical reasoning platform used at 40+ medical schools across the US.",
     url: "https://rounds.care",
-    bg: "bg-slate-100",
     label: "Healthcare SaaS",
+    accent: "#1a3a5c",
   },
   {
-    name: "Project Two",
-    description: "Marketing site for an early-stage fintech startup.",
-    url: "#",
-    bg: "bg-stone-100",
-    label: "Fintech",
+    name: "MD+",
+    description: "Full website redesign for a nonprofit community of 5,000+ medical student and physician-innovators.",
+    url: "https://mdplus.community",
+    label: "Healthcare Community",
+    accent: "#0f2d1f",
   },
   {
-    name: "Project Three",
-    description: "Brand and web presence for a boutique consulting firm.",
-    url: "#",
-    bg: "bg-zinc-100",
-    label: "Consulting",
+    name: "Brask Group",
+    description: "Brand and web presence for a healthcare infrastructure holding company.",
+    url: "https://braskgroup.com",
+    label: "Holding Company",
+    accent: "#1c1a2e",
   },
 ];
 
@@ -29,6 +29,9 @@ const steps = [
   { week: "Week 2", description: "We refine. We launch." },
   { week: "Ongoing", description: "Optional retainer for edits and updates." },
 ];
+
+const NAVY = "#0F1B2D";
+const NAVY_HOVER = "#162438";
 
 export default function Home() {
   return (
@@ -39,7 +42,8 @@ export default function Home() {
           <span className="text-sm font-semibold tracking-tight">Brask Studio</span>
           <a
             href="#contact"
-            className="text-sm font-medium text-[#2563eb] hover:text-[#1d4ed8] transition-colors"
+            style={{ color: NAVY }}
+            className="text-sm font-medium transition-opacity hover:opacity-70"
           >
             Get in touch
           </a>
@@ -47,18 +51,20 @@ export default function Home() {
       </nav>
 
       {/* Hero */}
-      <section className="pt-40 pb-28 px-6">
+      <section className="pt-48 pb-40 px-6">
         <div className="max-w-5xl mx-auto">
-          <h1 className="text-4xl sm:text-5xl md:text-[3.5rem] font-semibold tracking-tight leading-[1.1] max-w-2xl">
+          <h1 className="text-5xl sm:text-6xl md:text-7xl font-bold tracking-tight leading-[1.05] max-w-3xl">
             Websites that make you look as good as you actually are.
           </h1>
-          <p className="mt-6 text-lg text-[#78716c] max-w-lg leading-relaxed">
-            I build clean, fast marketing sites for healthcare startups and
-            early-stage companies. Two weeks, flat rate.
+          <p className="mt-8 text-xl text-[#6b7280] max-w-xl leading-relaxed font-light">
+            We build clean, fast marketing sites for healthcare practices,
+            professional services firms, and early-stage companies. Two weeks,
+            flat rate.
           </p>
           <a
             href="#contact"
-            className="mt-8 inline-flex items-center gap-2 bg-[#2563eb] hover:bg-[#1d4ed8] text-white text-sm font-medium px-5 py-2.5 rounded-lg transition-colors"
+            style={{ backgroundColor: NAVY }}
+            className="mt-10 inline-flex items-center gap-2.5 text-white text-sm font-medium px-6 py-3 rounded-lg transition-opacity hover:opacity-85"
           >
             Start a project
             <ArrowRight className="w-4 h-4" />
@@ -69,33 +75,34 @@ export default function Home() {
       {/* Work */}
       <section id="work" className="py-24 px-6 border-t border-[#e7e5e4]">
         <div className="max-w-5xl mx-auto">
-          <h2 className="text-xs font-semibold uppercase tracking-widest text-[#78716c] mb-10">
+          <h2 className="text-xs font-semibold uppercase tracking-widest text-[#9ca3af] mb-12">
             Work
           </h2>
-          <div className="grid grid-cols-1 sm:grid-cols-3 gap-5">
+          <div className="grid grid-cols-1 sm:grid-cols-3 gap-6">
             {projects.map((project) => (
               <a
                 key={project.name}
                 href={project.url}
-                target={project.url !== "#" ? "_blank" : undefined}
+                target="_blank"
                 rel="noopener noreferrer"
-                className="group block rounded-xl overflow-hidden border border-[#e7e5e4] hover:border-[#a8a29e] transition-colors"
+                className="group block rounded-2xl overflow-hidden border border-[#e7e5e4] hover:border-[#cbd5e1] transition-all duration-200 shadow-sm hover:shadow-md"
               >
                 <div
-                  className={`${project.bg} h-44 flex items-center justify-center`}
+                  className="h-48 flex items-end p-6"
+                  style={{ backgroundColor: project.accent }}
                 >
-                  <span className="text-2xl font-semibold tracking-tight text-[#44403c]">
+                  <span className="text-3xl font-bold tracking-tight text-white leading-none">
                     {project.name}
                   </span>
                 </div>
-                <div className="p-4">
-                  <div className="flex items-center justify-between mb-1">
-                    <span className="text-sm font-semibold">{project.name}</span>
-                    <span className="text-xs text-[#78716c] bg-[#f5f5f4] px-2 py-0.5 rounded-full">
+                <div className="p-5 bg-white">
+                  <div className="flex items-center justify-between mb-2">
+                    <span className="text-sm font-semibold text-[#111110]">{project.name}</span>
+                    <span className="text-xs text-[#6b7280] bg-[#f3f4f6] px-2.5 py-1 rounded-full font-medium">
                       {project.label}
                     </span>
                   </div>
-                  <p className="text-sm text-[#78716c]">{project.description}</p>
+                  <p className="text-sm text-[#6b7280] leading-relaxed">{project.description}</p>
                 </div>
               </a>
             ))}
@@ -106,21 +113,24 @@ export default function Home() {
       {/* How It Works */}
       <section id="process" className="py-24 px-6 border-t border-[#e7e5e4]">
         <div className="max-w-5xl mx-auto">
-          <h2 className="text-xs font-semibold uppercase tracking-widest text-[#78716c] mb-10">
+          <h2 className="text-xs font-semibold uppercase tracking-widest text-[#9ca3af] mb-12">
             How it works
           </h2>
-          <div className="grid grid-cols-1 sm:grid-cols-3 gap-8">
+          <div className="grid grid-cols-1 sm:grid-cols-3 gap-10">
             {steps.map((step, i) => (
               <div key={step.week}>
                 <div className="flex items-center gap-3 mb-3">
-                  <span className="w-6 h-6 rounded-full bg-[#2563eb] text-white text-xs flex items-center justify-center font-semibold flex-shrink-0">
+                  <span
+                    className="w-6 h-6 rounded-full text-white text-xs flex items-center justify-center font-semibold flex-shrink-0"
+                    style={{ backgroundColor: NAVY }}
+                  >
                     {i + 1}
                   </span>
-                  <span className="text-sm font-semibold text-[#2563eb]">
+                  <span className="text-sm font-semibold" style={{ color: NAVY }}>
                     {step.week}
                   </span>
                 </div>
-                <p className="text-[#44403c] leading-relaxed">{step.description}</p>
+                <p className="text-[#374151] leading-relaxed">{step.description}</p>
               </div>
             ))}
           </div>
@@ -130,14 +140,14 @@ export default function Home() {
       {/* Pricing */}
       <section id="pricing" className="py-24 px-6 border-t border-[#e7e5e4]">
         <div className="max-w-5xl mx-auto">
-          <h2 className="text-xs font-semibold uppercase tracking-widest text-[#78716c] mb-10">
+          <h2 className="text-xs font-semibold uppercase tracking-widest text-[#9ca3af] mb-12">
             Pricing
           </h2>
           <div className="max-w-xl">
-            <p className="text-xl font-semibold tracking-tight mb-4">
+            <p className="text-2xl font-bold tracking-tight mb-4">
               Projects start at $3,500.
             </p>
-            <p className="text-[#44403c] leading-relaxed">
+            <p className="text-[#374151] leading-relaxed text-lg">
               Retainers from $400/month. Rush delivery available. No complicated
               tier tables — just a flat rate, clear scope, and a two-week
               timeline from kickoff to launch.
@@ -149,11 +159,11 @@ export default function Home() {
       {/* About */}
       <section id="about" className="py-24 px-6 border-t border-[#e7e5e4]">
         <div className="max-w-5xl mx-auto">
-          <h2 className="text-xs font-semibold uppercase tracking-widest text-[#78716c] mb-10">
+          <h2 className="text-xs font-semibold uppercase tracking-widest text-[#9ca3af] mb-12">
             About
           </h2>
           <div className="max-w-xl">
-            <p className="text-[#44403c] leading-relaxed text-lg">
+            <p className="text-[#374151] leading-relaxed text-xl font-light">
               I&apos;m Ali — MS3 at UConn, founder, and software engineer. I&apos;ve been
               building on the web for years and I care way too much about things
               loading fast and looking right. I work with a small number of
@@ -168,25 +178,22 @@ export default function Home() {
       {/* Contact */}
       <section id="contact" className="py-24 px-6 border-t border-[#e7e5e4]">
         <div className="max-w-5xl mx-auto">
-          <h2 className="text-xs font-semibold uppercase tracking-widest text-[#78716c] mb-10">
+          <h2 className="text-xs font-semibold uppercase tracking-widest text-[#9ca3af] mb-12">
             Contact
           </h2>
           <div className="max-w-xl">
-            <p className="text-[#44403c] leading-relaxed mb-8">
+            <p className="text-[#374151] leading-relaxed text-lg mb-10">
               Ready to start? Fill out the form below and I&apos;ll get back to you
               within 24 hours.
             </p>
             <form
               action="https://formspree.io/f/placeholder"
               method="POST"
-              className="space-y-4"
+              className="space-y-5"
             >
-              <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
+              <div className="grid grid-cols-1 sm:grid-cols-2 gap-5">
                 <div>
-                  <label
-                    htmlFor="name"
-                    className="block text-sm font-medium mb-1.5"
-                  >
+                  <label htmlFor="name" className="block text-sm font-medium mb-2 text-[#374151]">
                     Name
                   </label>
                   <input
@@ -194,15 +201,13 @@ export default function Home() {
                     id="name"
                     name="name"
                     required
-                    className="w-full px-3 py-2.5 text-sm border border-[#e7e5e4] rounded-lg bg-white focus:outline-none focus:ring-2 focus:ring-[#2563eb] focus:border-transparent transition-all"
+                    className="w-full px-4 py-3 text-sm border border-[#e5e7eb] rounded-lg bg-white focus:outline-none focus:ring-2 focus:border-transparent transition-all"
+                    style={{ "--tw-ring-color": NAVY } as React.CSSProperties}
                     placeholder="Your name"
                   />
                 </div>
                 <div>
-                  <label
-                    htmlFor="email"
-                    className="block text-sm font-medium mb-1.5"
-                  >
+                  <label htmlFor="email" className="block text-sm font-medium mb-2 text-[#374151]">
                     Email
                   </label>
                   <input
@@ -210,16 +215,14 @@ export default function Home() {
                     id="email"
                     name="email"
                     required
-                    className="w-full px-3 py-2.5 text-sm border border-[#e7e5e4] rounded-lg bg-white focus:outline-none focus:ring-2 focus:ring-[#2563eb] focus:border-transparent transition-all"
+                    className="w-full px-4 py-3 text-sm border border-[#e5e7eb] rounded-lg bg-white focus:outline-none focus:ring-2 focus:border-transparent transition-all"
+                    style={{ "--tw-ring-color": NAVY } as React.CSSProperties}
                     placeholder="you@company.com"
                   />
                 </div>
               </div>
               <div>
-                <label
-                  htmlFor="message"
-                  className="block text-sm font-medium mb-1.5"
-                >
+                <label htmlFor="message" className="block text-sm font-medium mb-2 text-[#374151]">
                   What are you building?
                 </label>
                 <textarea
@@ -227,13 +230,15 @@ export default function Home() {
                   name="message"
                   required
                   rows={4}
-                  className="w-full px-3 py-2.5 text-sm border border-[#e7e5e4] rounded-lg bg-white focus:outline-none focus:ring-2 focus:ring-[#2563eb] focus:border-transparent transition-all resize-none"
+                  className="w-full px-4 py-3 text-sm border border-[#e5e7eb] rounded-lg bg-white focus:outline-none focus:ring-2 focus:border-transparent transition-all resize-none"
+                  style={{ "--tw-ring-color": NAVY } as React.CSSProperties}
                   placeholder="Tell me about your project..."
                 />
               </div>
               <button
                 type="submit"
-                className="inline-flex items-center gap-2 bg-[#2563eb] hover:bg-[#1d4ed8] text-white text-sm font-medium px-5 py-2.5 rounded-lg transition-colors"
+                style={{ backgroundColor: NAVY }}
+                className="inline-flex items-center gap-2 text-white text-sm font-medium px-6 py-3 rounded-lg transition-opacity hover:opacity-85"
               >
                 <Mail className="w-4 h-4" />
                 Send message
@@ -246,14 +251,14 @@ export default function Home() {
       {/* Footer */}
       <footer className="py-8 px-6 border-t border-[#e7e5e4]">
         <div className="max-w-5xl mx-auto flex items-center justify-between">
-          <span className="text-sm text-[#78716c]">
+          <span className="text-sm text-[#9ca3af]">
             © {new Date().getFullYear()} Brask Studio
           </span>
           <a
             href="https://linkedin.com/in/thisisalimirza"
             target="_blank"
             rel="noopener noreferrer"
-            className="text-sm text-[#78716c] hover:text-[#111110] transition-colors"
+            className="text-sm text-[#9ca3af] hover:text-[#111110] transition-colors"
           >
             LinkedIn
           </a>
