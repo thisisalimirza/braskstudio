@@ -1,0 +1,12 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 32 32">
+  <!-- Navy background -->
+  <rect width="32" height="32" rx="7" fill="#0F1B2D"/>
+  <!-- Outer square mark -->
+  <rect x="5.5" y="4.5" width="14" height="18" rx="1" stroke="white" stroke-width="1.6" fill="none"/>
+  <!-- Vertical center line -->
+  <line x1="12.5" y1="4.5" x2="12.5" y2="22.5" stroke="white" stroke-width="1.6"/>
+  <!-- Horizontal center line -->
+  <line x1="5.5" y1="13.5" x2="19.5" y2="13.5" stroke="white" stroke-width="1.6"/>
+  <!-- D-arc: right half circle -->
+  <path d="M12.5 4.5 A9 9 0 0 1 12.5 22.5" stroke="white" stroke-width="1.6" fill="none"/>
+</svg>
