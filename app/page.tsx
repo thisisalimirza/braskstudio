@@ -72,11 +72,11 @@ const steps = [
 const faqs = [
   {
     q: "What do I need to have ready before we start?",
-    a: "Content mostly — copy, brand assets, any photos or screenshots you want to use. I can write short copy if needed, but the faster you get me the raw material, the faster we move. Don't wait until everything's perfect to reach out.",
+    a: "Content mostly. Copy, brand assets, photos. But if you don't have what you need, I can come shoot it — labor and equipment are on me. If you're in another city, I'd need travel covered. One thing to know: if we're shooting content together, the two-week timeline goes out the window. We'd set a new one.",
   },
   {
     q: "What's included in the $3,500?",
-    a: "Design, development, and launch of a full marketing site — typically 4–6 pages. Figma mockups before we build, one round of revisions per page, and hosting setup if you need it. Not included: copywriting from scratch, custom illustrations, or anything outside the agreed scope.",
+    a: "A website you're happy with. No page limits, no revision tally — we work until it's right. I can offer this because I'm selective about who I work with. I need clients who can tell me what they want and give me honest feedback. If that's you, it works exactly as advertised.",
   },
   {
     q: "Two weeks — is that actually realistic?",
