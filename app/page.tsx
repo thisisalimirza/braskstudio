@@ -7,7 +7,7 @@ const projects = [
   {
     name: "Rounds",
     description:
-      "Clinical reasoning platform used by 40+ medical schools across the US. Built for the workflows real clinicians actually use.",
+      "Clinical reasoning platform used at 40+ medical schools. Designed around how physicians actually move through a case.",
     url: "https://getrounds.app",
     label: "Healthcare SaaS",
     image: "/portfolio/rounds.jpeg",
@@ -15,7 +15,7 @@ const projects = [
   {
     name: "Sitr",
     description:
-      "Replaced manual spreadsheets with a real-time seating platform built for high-stakes medical school events at scale.",
+      "Replaced the spreadsheets medical schools relied on for seating. Handles hundreds of students per event.",
     url: "https://usesitr.com",
     label: "Healthcare SaaS",
     image: "/portfolio/sitr.jpeg",
@@ -23,7 +23,7 @@ const projects = [
   {
     name: "Medical Innovation Podcast",
     description:
-      "Built a brand and web presence that matches the credibility of the guests — physicians, founders, and researchers.",
+      "Brand and site for a podcast with practicing physicians and healthcare founders as guests. Looks like it belongs.",
     url: "https://medicalinnovationpod.com/",
     label: "Media",
     image: "/portfolio/medicalinnovationpodcast.png",
@@ -31,7 +31,7 @@ const projects = [
   {
     name: "MD+",
     description:
-      "Built a scalable identity and platform for a 5,000-member community of medical student and physician-innovators.",
+      "Brand system and platform for 5,000 medical students and physicians building things on the side.",
     url: "https://mdplus-nine.vercel.app/",
     label: "Healthcare Community",
     image: "/portfolio/mdplus.png",
@@ -39,7 +39,7 @@ const projects = [
   {
     name: "Byline",
     description:
-      "Clean publishing platform for writers who want to own their audience — no algorithm, no middleman.",
+      "Publishing platform for writers who'd rather own their audience than rent it from an algorithm.",
     url: "https://bylineblogs.com/",
     label: "SaaS",
     image: "/portfolio/byline.jpeg",
@@ -47,7 +47,7 @@ const projects = [
   {
     name: "Supertasks",
     description:
-      "Task management stripped to its core. Built for founders who need focus, not another feature list.",
+      "Task manager with nothing extra. For founders who already know what they need to do.",
     url: "https://supertasks-app.vercel.app/",
     label: "Productivity",
     image: "/portfolio/Supertasks.png",
@@ -57,7 +57,7 @@ const projects = [
 const steps = [
   {
     week: "Week 1",
-    description: "You send content. I build the core architecture and design.",
+    description: "You send content. I build the architecture and design.",
   },
   {
     week: "Week 2",
@@ -136,9 +136,8 @@ export default function Home() {
           Websites that make you look as good as you actually are.
         </h1>
         <p className="mt-6 sm:mt-8 text-base sm:text-lg text-[#6b7280] max-w-xl leading-relaxed font-light">
-          We build clean, fast marketing sites for healthcare practices,
-          professional services firms, and early-stage companies. Two weeks,
-          flat rate.
+          We build clean, fast marketing sites for healthcare companies and
+          early-stage startups. Two weeks, flat rate.
         </p>
         <a
           href="#contact"
@@ -226,8 +225,8 @@ export default function Home() {
             ))}
           </div>
           <p className="text-xs text-[#6b7280] border-t border-[#e7e5e4] pt-6 leading-relaxed max-w-2xl">
-            No hidden fees. No endless email chains. A clear scope from day one
-            and a launch date you can count on.
+            No hidden fees. Scope is set before we start. There's a real launch
+            date you can plan around.
           </p>
         </div>
       </section>
@@ -246,9 +245,8 @@ export default function Home() {
               Projects start at $3,500.
             </p>
             <p className="text-[#374151] leading-relaxed text-base sm:text-lg font-light">
-              Retainers from $400/month. Rush delivery available. No complicated
-              tier tables — just a flat rate, clear scope, and a two-week
-              timeline from kickoff to launch.
+              Retainers from $400/month. Rush delivery available. One price,
+              one scope, two weeks from kickoff to launch. No tiers.
             </p>
           </div>
         </div>
@@ -268,13 +266,12 @@ export default function Home() {
           </p>
           <div className="max-w-2xl">
             <p className="text-[#374151] leading-relaxed text-base sm:text-lg font-light">
-              I&apos;m Ali — MS3 at UConn, founder, and software engineer.
-              I&apos;ve been building on the web for years and I care way too
-              much about things loading fast and looking right. I work with a
-              small number of clients at a time so I can actually focus on what
-              I&apos;m building. The medical school angle isn&apos;t incidental
-              — it means I actually understand what healthcare companies are
-              trying to say.
+              I&apos;m Ali. MS3 at UConn, and I&apos;ve been building on the
+              web for years. I care maybe too much about pages loading fast and
+              designs looking right. I keep my client list small so I can stay
+              focused. The medical school part isn&apos;t a marketing angle. It
+              means I actually understand what healthcare companies are building
+              without needing it explained.
             </p>
           </div>
         </div>
@@ -293,8 +290,8 @@ export default function Home() {
                 contact
               </p>
               <p className="text-xl sm:text-2xl font-bold tracking-tight mb-6 text-[#111110] leading-snug">
-                If you&apos;re a founder with a story worth telling, we&apos;d
-                like to hear from you.
+                Building something in healthcare, or just need to ship in two
+                weeks? Get in touch.
               </p>
               <p className="text-[#6b7280] text-sm leading-relaxed">
                 Or email directly:
