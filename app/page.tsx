@@ -381,6 +381,7 @@ export default function Home() {
                   sizes="(max-width: 640px) 100vw, 260px"
                 />
               </div>
+            </div>
           </div>
         </div>
       </section>
