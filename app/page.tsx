@@ -1,6 +1,8 @@
 import Image from "next/image";
 import { ArrowRight } from "lucide-react";
 
+const NAVY = "#0F1B2D";
+
 const projects = [
   {
     name: "Rounds",
@@ -98,11 +100,11 @@ function ProjectCard({ project, className = "" }: ProjectCardProps) {
 
 export default function Home() {
   return (
-    <div className="bg-[#0c0c0c] text-[#e2e2e2] min-h-screen">
+    <div className="bg-[#fafaf9] text-[#111110] min-h-screen">
       {/* Nav */}
-      <nav className="fixed top-0 left-0 right-0 z-50 bg-[#0c0c0c]/90 backdrop-blur-sm border-b border-white/[0.06]">
+      <nav className="fixed top-0 left-0 right-0 z-50 bg-[#fafaf9]/90 backdrop-blur-sm border-b border-[#e7e5e4]">
         <div className="max-w-[1400px] mx-auto px-6 h-11 flex items-center justify-between">
-          <span className="text-xs font-semibold tracking-tight text-[#e2e2e2]">
+          <span className="text-xs font-semibold tracking-tight text-[#111110]">
             Brask Studio
           </span>
           <div className="hidden sm:flex items-center gap-7">
@@ -116,7 +118,7 @@ export default function Home() {
               <a
                 key={label}
                 href={href}
-                className="text-[11px] text-[#555] hover:text-[#e2e2e2] transition-colors"
+                className="text-[11px] text-[#9ca3af] hover:text-[#111110] transition-colors"
               >
                 {label}
               </a>
@@ -127,33 +129,33 @@ export default function Home() {
 
       {/* Hero */}
       <section className="pt-40 pb-24 sm:pt-56 sm:pb-36 px-6 max-w-[1400px] mx-auto">
-        <p className="text-[11px] text-[#555] uppercase tracking-[0.18em] mb-8">
+        <p className="text-[11px] text-[#9ca3af] uppercase tracking-[0.18em] mb-8">
           Brask Studio.
         </p>
-        <h1 className="text-4xl sm:text-6xl md:text-7xl font-bold tracking-tight leading-[1.05] max-w-3xl text-[#e2e2e2]">
+        <h1 className="text-4xl sm:text-6xl md:text-7xl font-bold tracking-tight leading-[1.05] max-w-3xl text-[#111110]">
           Websites that make you look as good as you actually are.
         </h1>
-        <p className="mt-6 sm:mt-8 text-base sm:text-lg text-[#555] max-w-xl leading-relaxed font-light">
+        <p className="mt-6 sm:mt-8 text-base sm:text-lg text-[#6b7280] max-w-xl leading-relaxed font-light">
           We build clean, fast marketing sites for healthcare practices,
           professional services firms, and early-stage companies. Two weeks,
           flat rate.
         </p>
         <a
           href="#contact"
-          className="mt-10 sm:mt-12 inline-flex items-center gap-2 text-[11px] text-[#666] hover:text-[#e2e2e2] transition-colors tracking-[0.12em] uppercase"
+          style={{ color: NAVY }}
+          className="mt-10 sm:mt-12 inline-flex items-center gap-2 text-[11px] transition-opacity hover:opacity-60 tracking-[0.12em] uppercase font-semibold"
         >
           Start a project <ArrowRight className="w-3 h-3" />
         </a>
       </section>
 
       {/* Work — Mosaic Grid */}
-      <section id="work" className="border-t border-white/[0.06]">
+      <section id="work" className="border-t border-[#e7e5e4]">
         <div className="max-w-[1400px] mx-auto px-6 pt-10 pb-6">
-          <p className="text-[11px] text-[#555] uppercase tracking-[0.18em]">
+          <p className="text-[11px] text-[#9ca3af] uppercase tracking-[0.18em]">
             work
           </p>
         </div>
-        {/* Grid: 1 col mobile → 3 col desktop, mosaic layout */}
         <div className="max-w-[1400px] mx-auto px-6">
           <div className="grid grid-cols-1 sm:grid-cols-3 gap-0.5">
             {/* Rounds — wide (col 1–2) */}
@@ -194,30 +196,36 @@ export default function Home() {
       {/* How It Works */}
       <section
         id="process"
-        className="py-20 sm:py-28 px-6 border-t border-white/[0.06]"
+        className="py-20 sm:py-28 px-6 border-t border-[#e7e5e4]"
       >
         <div className="max-w-[1400px] mx-auto">
-          <p className="text-[11px] text-[#555] uppercase tracking-[0.18em] mb-12">
+          <p className="text-[11px] text-[#9ca3af] uppercase tracking-[0.18em] mb-12">
             how it works
           </p>
           <div className="grid grid-cols-1 sm:grid-cols-3 gap-10 sm:gap-12 mb-10">
             {steps.map((step, i) => (
               <div key={step.week}>
                 <div className="flex items-center gap-3 mb-4">
-                  <span className="w-5 h-5 rounded-full bg-white/10 text-[#e2e2e2] text-[10px] flex items-center justify-center font-semibold flex-shrink-0">
+                  <span
+                    className="w-5 h-5 rounded-full text-white text-[10px] flex items-center justify-center font-semibold flex-shrink-0"
+                    style={{ backgroundColor: NAVY }}
+                  >
                     {i + 1}
                   </span>
-                  <span className="text-xs font-semibold text-[#e2e2e2] tracking-wide">
+                  <span
+                    className="text-xs font-semibold tracking-wide"
+                    style={{ color: NAVY }}
+                  >
                     {step.week}
                   </span>
                 </div>
-                <p className="text-[#666] leading-relaxed text-sm">
+                <p className="text-[#374151] leading-relaxed text-sm">
                   {step.description}
                 </p>
               </div>
             ))}
           </div>
-          <p className="text-xs text-[#444] border-t border-white/[0.06] pt-6 leading-relaxed max-w-2xl">
+          <p className="text-xs text-[#6b7280] border-t border-[#e7e5e4] pt-6 leading-relaxed max-w-2xl">
             No hidden fees. No endless email chains. A clear scope from day one
             and a launch date you can count on.
           </p>
@@ -227,17 +235,17 @@ export default function Home() {
       {/* Pricing */}
       <section
         id="pricing"
-        className="py-20 sm:py-28 px-6 border-t border-white/[0.06]"
+        className="py-20 sm:py-28 px-6 border-t border-[#e7e5e4]"
       >
         <div className="max-w-[1400px] mx-auto">
-          <p className="text-[11px] text-[#555] uppercase tracking-[0.18em] mb-12">
+          <p className="text-[11px] text-[#9ca3af] uppercase tracking-[0.18em] mb-12">
             pricing
           </p>
           <div className="max-w-xl">
-            <p className="text-2xl sm:text-3xl font-bold tracking-tight mb-5 text-[#e2e2e2]">
+            <p className="text-2xl sm:text-3xl font-bold tracking-tight mb-5 text-[#111110]">
               Projects start at $3,500.
             </p>
-            <p className="text-[#666] leading-relaxed text-base sm:text-lg font-light">
+            <p className="text-[#374151] leading-relaxed text-base sm:text-lg font-light">
               Retainers from $400/month. Rush delivery available. No complicated
               tier tables — just a flat rate, clear scope, and a two-week
               timeline from kickoff to launch.
@@ -249,17 +257,17 @@ export default function Home() {
       {/* About */}
       <section
         id="about"
-        className="py-20 sm:py-28 px-6 border-t border-white/[0.06]"
+        className="py-20 sm:py-28 px-6 border-t border-[#e7e5e4]"
       >
         <div className="max-w-[1400px] mx-auto">
-          <p className="text-[11px] text-[#555] uppercase tracking-[0.18em] mb-6">
+          <p className="text-[11px] text-[#9ca3af] uppercase tracking-[0.18em] mb-6">
             about
           </p>
-          <p className="text-xl sm:text-2xl font-bold tracking-tight mb-10 text-[#e2e2e2]">
+          <p className="text-xl sm:text-2xl font-bold tracking-tight mb-10 text-[#111110]">
             Domain expertise matters.
           </p>
           <div className="max-w-2xl">
-            <p className="text-[#666] leading-relaxed text-base sm:text-lg font-light">
+            <p className="text-[#374151] leading-relaxed text-base sm:text-lg font-light">
               I&apos;m Ali — MS3 at UConn, founder, and software engineer.
               I&apos;ve been building on the web for years and I care way too
               much about things loading fast and looking right. I work with a
@@ -275,25 +283,26 @@ export default function Home() {
       {/* Contact */}
       <section
         id="contact"
-        className="py-20 sm:py-28 px-6 border-t border-white/[0.06]"
+        className="py-20 sm:py-28 px-6 border-t border-[#e7e5e4]"
       >
         <div className="max-w-[1400px] mx-auto">
           <div className="grid grid-cols-1 sm:grid-cols-2 gap-16 sm:gap-24">
             {/* Left */}
             <div>
-              <p className="text-[11px] text-[#555] uppercase tracking-[0.18em] mb-6">
+              <p className="text-[11px] text-[#9ca3af] uppercase tracking-[0.18em] mb-6">
                 contact
               </p>
-              <p className="text-xl sm:text-2xl font-bold tracking-tight mb-6 text-[#e2e2e2] leading-snug">
+              <p className="text-xl sm:text-2xl font-bold tracking-tight mb-6 text-[#111110] leading-snug">
                 If you&apos;re a founder with a story worth telling, we&apos;d
                 like to hear from you.
               </p>
-              <p className="text-[#555] text-sm leading-relaxed">
+              <p className="text-[#6b7280] text-sm leading-relaxed">
                 Or email directly:
                 <br />
                 <a
                   href="mailto:hello@braskstudio.com"
-                  className="text-[#666] hover:text-[#e2e2e2] transition-colors"
+                  style={{ color: NAVY }}
+                  className="hover:opacity-70 transition-opacity"
                 >
                   hello@braskstudio.com
                 </a>
@@ -314,32 +323,33 @@ export default function Home() {
                   name="name"
                   required
                   placeholder="your name"
-                  className="w-full px-0 py-4 text-sm bg-transparent border-0 border-b border-white/[0.1] text-[#e2e2e2] placeholder-[#3a3a3a] focus:outline-none focus:border-white/30 transition-colors"
+                  className="w-full px-0 py-4 text-sm bg-transparent border-0 border-b border-[#e7e5e4] text-[#111110] placeholder-[#9ca3af] focus:outline-none focus:border-[#0F1B2D] transition-colors"
                 />
                 <input
                   type="email"
                   name="email"
                   required
                   placeholder="email address"
-                  className="w-full px-0 py-4 text-sm bg-transparent border-0 border-b border-white/[0.1] text-[#e2e2e2] placeholder-[#3a3a3a] focus:outline-none focus:border-white/30 transition-colors"
+                  className="w-full px-0 py-4 text-sm bg-transparent border-0 border-b border-[#e7e5e4] text-[#111110] placeholder-[#9ca3af] focus:outline-none focus:border-[#0F1B2D] transition-colors"
                 />
                 <input
                   type="text"
                   name="company"
                   placeholder="company"
-                  className="w-full px-0 py-4 text-sm bg-transparent border-0 border-b border-white/[0.1] text-[#e2e2e2] placeholder-[#3a3a3a] focus:outline-none focus:border-white/30 transition-colors"
+                  className="w-full px-0 py-4 text-sm bg-transparent border-0 border-b border-[#e7e5e4] text-[#111110] placeholder-[#9ca3af] focus:outline-none focus:border-[#0F1B2D] transition-colors"
                 />
                 <textarea
                   name="message"
                   required
                   rows={3}
                   placeholder="your idea, timeline, and anything else we should know."
-                  className="w-full px-0 py-4 text-sm bg-transparent border-0 border-b border-white/[0.1] text-[#e2e2e2] placeholder-[#3a3a3a] focus:outline-none focus:border-white/30 transition-colors resize-none"
+                  className="w-full px-0 py-4 text-sm bg-transparent border-0 border-b border-[#e7e5e4] text-[#111110] placeholder-[#9ca3af] focus:outline-none focus:border-[#0F1B2D] transition-colors resize-none"
                 />
                 <div className="pt-6">
                   <button
                     type="submit"
-                    className="inline-flex items-center gap-2 px-5 py-2.5 text-xs font-medium text-[#0c0c0c] bg-[#e2e2e2] hover:bg-white transition-colors tracking-wide rounded-sm cursor-pointer"
+                    style={{ backgroundColor: NAVY }}
+                    className="inline-flex items-center gap-2 px-5 py-2.5 text-xs font-medium text-white hover:opacity-85 transition-opacity tracking-wide rounded-sm cursor-pointer"
                   >
                     submit →
                   </button>
@@ -351,9 +361,9 @@ export default function Home() {
       </section>
 
       {/* Footer */}
-      <footer className="py-8 px-6 border-t border-white/[0.06]">
+      <footer className="py-8 px-6 border-t border-[#e7e5e4]">
         <div className="max-w-[1400px] mx-auto flex items-center justify-between">
-          <span className="text-xs text-[#3a3a3a]">
+          <span className="text-xs text-[#9ca3af]">
             © {new Date().getFullYear()} Brask Studio
           </span>
           <div className="hidden sm:flex items-center gap-6">
@@ -361,7 +371,7 @@ export default function Home() {
               <a
                 key={link}
                 href={link === "home" ? "#" : `#${link}`}
-                className="text-[11px] text-[#3a3a3a] hover:text-[#888] transition-colors"
+                className="text-[11px] text-[#9ca3af] hover:text-[#6b7280] transition-colors"
               >
                 {link}
               </a>
