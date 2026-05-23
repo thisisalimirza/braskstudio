@@ -293,6 +293,15 @@ export default function Home() {
               person you&apos;re paying, that&apos;s what I&apos;m trying to
               not be. I pick things up fast. Say it once, I&apos;ve got it.
             </p>
+            <a
+              href="https://www.linkedin.com/in/thisisalimirza/"
+              target="_blank"
+              rel="noopener noreferrer"
+              style={{ color: NAVY }}
+              className="inline-block text-xs font-semibold tracking-wide hover:opacity-60 transition-opacity pt-2"
+            >
+              LinkedIn →
+            </a>
           </div>
         </div>
       </section>
@@ -417,6 +426,14 @@ export default function Home() {
                 </a>
               )
             )}
+            <a
+              href="https://www.linkedin.com/in/thisisalimirza/"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="text-[11px] text-[#9ca3af] hover:text-[#6b7280] transition-colors"
+            >
+              linkedin
+            </a>
           </div>
         </div>
       </footer>
