@@ -156,36 +156,36 @@ export default function Home() {
           </p>
         </div>
         <div className="max-w-[1400px] mx-auto px-6">
-          <div className="grid grid-cols-1 sm:grid-cols-3 gap-0.5">
+          <div className="grid grid-cols-2 sm:grid-cols-3 sm:[grid-template-rows:300px_300px_300px] gap-0.5">
             {/* Rounds — wide (col 1–2) */}
             <ProjectCard
               project={projects[0]}
-              className="sm:col-span-2 aspect-video sm:aspect-[16/7]"
+              className="col-span-2 aspect-[3/2] sm:aspect-auto"
             />
-            {/* Sitr — tall (col 3, row 1–2) */}
+            {/* Sitr — tall (col 3, rows 1–2) */}
             <ProjectCard
               project={projects[1]}
-              className="aspect-video sm:row-span-2 sm:aspect-auto"
+              className="aspect-[3/2] sm:aspect-auto sm:row-span-2"
             />
             {/* Medical Innovation Podcast */}
             <ProjectCard
               project={projects[2]}
-              className="aspect-video sm:aspect-[4/3]"
+              className="aspect-[3/2] sm:aspect-auto"
             />
             {/* MD+ */}
             <ProjectCard
               project={projects[3]}
-              className="aspect-video sm:aspect-[4/3]"
+              className="aspect-[3/2] sm:aspect-auto"
             />
             {/* Byline — wide (col 1–2) */}
             <ProjectCard
               project={projects[4]}
-              className="sm:col-span-2 aspect-video sm:aspect-[16/7]"
+              className="col-span-2 aspect-[3/2] sm:aspect-auto"
             />
             {/* Supertasks */}
             <ProjectCard
               project={projects[5]}
-              className="aspect-video sm:aspect-[4/3]"
+              className="aspect-[3/2] sm:aspect-auto"
             />
           </div>
         </div>
