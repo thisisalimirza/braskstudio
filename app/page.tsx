@@ -156,9 +156,6 @@ export default function Home() {
 
       {/* Hero */}
       <section className="pt-36 pb-16 sm:pt-52 sm:pb-20 px-6 max-w-[1400px] mx-auto">
-        <p className="text-[11px] text-[#9ca3af] uppercase tracking-[0.18em] mb-8">
-          Brask Studio.
-        </p>
         <h1 className="text-4xl sm:text-6xl md:text-7xl font-bold tracking-tight leading-[1.05] max-w-3xl text-[#111110]">
           Websites that make you look as good as you actually are.
         </h1>
@@ -275,33 +272,49 @@ export default function Home() {
           <p className="text-[11px] text-[#9ca3af] uppercase tracking-[0.18em] mb-6">
             about
           </p>
-          <p className="text-xl sm:text-2xl font-bold tracking-tight mb-8 text-[#111110]">
-            Domain expertise matters.
-          </p>
-          <div className="max-w-2xl space-y-5">
-            <p className="text-[#374151] leading-relaxed text-base sm:text-lg font-light">
-              I&apos;m Ali. MS3 at UConn, and I&apos;ve been building on the
-              web for years. I care maybe too much about pages loading fast and
-              designs looking right. I keep my client list small so I can stay
-              focused.
-            </p>
-            <p className="text-[#374151] leading-relaxed text-base sm:text-lg font-light">
-              The medical school thing isn&apos;t just for healthcare clients.
-              It also means I&apos;m the kind of person you won&apos;t have to
-              explain yourself to twice. If you&apos;ve ever hired someone and
-              spent half the project re-explaining your own business to the
-              person you&apos;re paying, that&apos;s what I&apos;m trying to
-              not be. I pick things up fast. Say it once, I&apos;ve got it.
-            </p>
-            <a
-              href="https://www.linkedin.com/in/thisisalimirza/"
-              target="_blank"
-              rel="noopener noreferrer"
-              style={{ color: NAVY }}
-              className="inline-block text-xs font-semibold tracking-wide hover:opacity-60 transition-opacity pt-2"
-            >
-              LinkedIn →
-            </a>
+          <div className="grid grid-cols-1 sm:grid-cols-[1fr_260px] gap-10 sm:gap-20 items-start">
+            {/* Text */}
+            <div>
+              <p className="text-xl sm:text-2xl font-bold tracking-tight mb-8 text-[#111110]">
+                Domain expertise matters.
+              </p>
+              <div className="max-w-2xl space-y-5">
+                <p className="text-[#374151] leading-relaxed text-base sm:text-lg font-light">
+                  I&apos;m Ali. MS3 at UConn, and I&apos;ve been building on
+                  the web for years. I care maybe too much about pages loading
+                  fast and designs looking right. I keep my client list small so
+                  I can stay focused.
+                </p>
+                <p className="text-[#374151] leading-relaxed text-base sm:text-lg font-light">
+                  The medical school thing isn&apos;t just for healthcare
+                  clients. It also means I&apos;m the kind of person you
+                  won&apos;t have to explain yourself to twice. If you&apos;ve
+                  ever hired someone and spent half the project re-explaining
+                  your own business to the person you&apos;re paying,
+                  that&apos;s what I&apos;m trying to not be. I pick things up
+                  fast. Say it once, I&apos;ve got it.
+                </p>
+                <a
+                  href="https://www.linkedin.com/in/thisisalimirza/"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  style={{ color: NAVY }}
+                  className="inline-block text-xs font-semibold tracking-wide hover:opacity-60 transition-opacity pt-2"
+                >
+                  LinkedIn →
+                </a>
+              </div>
+            </div>
+            {/* Photo */}
+            <div className="relative w-full aspect-square sm:aspect-auto sm:h-[320px] overflow-hidden rounded-sm bg-[#e7e5e4] order-first sm:order-last">
+              <Image
+                src="/ali.jpg"
+                alt="Ali Mirza"
+                fill
+                className="object-cover object-center"
+                sizes="(max-width: 640px) 100vw, 260px"
+              />
+            </div>
           </div>
         </div>
       </section>
