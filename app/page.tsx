@@ -1,5 +1,6 @@
 import Image from "next/image";
 import { ArrowRight } from "lucide-react";
+import { LAUNCHED } from "./config";
 
 const NAVY = "#0F1B2D";
 
@@ -125,7 +126,71 @@ function ProjectCard({ project, className = "" }: ProjectCardProps) {
   );
 }
 
+function PreLaunchPage() {
+  return (
+    <div className="min-h-screen bg-[#fafaf9] text-[#111110] flex flex-col">
+      {/* Nav */}
+      <nav className="px-6 sm:px-8 py-5 flex items-center justify-between">
+        <span className="text-xs font-semibold tracking-tight">
+          Brask Studio
+        </span>
+        <a
+          href="#waitlist"
+          className="text-[11px] font-medium border border-[#111110] px-4 py-2 tracking-wide hover:bg-[#111110] hover:text-[#fafaf9] transition-colors"
+        >
+          Join Waitlist
+        </a>
+      </nav>
+
+      {/* Centered hero */}
+      <div className="flex-1 flex items-center justify-center px-6 py-16">
+        <div className="text-center max-w-2xl w-full">
+          <p className="text-[11px] uppercase tracking-[0.3em] text-[#9ca3af] mb-10">
+            Launching Soon · Limited Spots
+          </p>
+          <h1 className="text-4xl sm:text-5xl md:text-[3.5rem] font-bold tracking-tight leading-[1.05] mb-6 text-[#111110]">
+            Websites that make you look as good as you actually are.
+          </h1>
+          <p className="text-[#6b7280] font-light leading-relaxed mb-10 text-base sm:text-lg max-w-lg mx-auto">
+            We&apos;re opening a few early-access spots before the full
+            launch. Lock in your project at pre-launch pricing — two weeks,
+            flat rate.
+          </p>
+          {/* Inline email form */}
+          <form
+            id="waitlist"
+            action="https://formspree.io/f/placeholder"
+            method="POST"
+            className="flex items-stretch border border-[#e7e5e4] max-w-md mx-auto"
+          >
+            <input
+              type="email"
+              name="email"
+              required
+              placeholder="Enter your email"
+              className="flex-1 min-w-0 px-4 py-3 text-sm bg-white text-[#111110] placeholder-[#9ca3af] focus:outline-none focus:ring-0"
+            />
+            <button
+              type="submit"
+              style={{ backgroundColor: NAVY }}
+              className="flex-shrink-0 px-5 py-3 text-[11px] font-medium text-white hover:opacity-85 transition-opacity tracking-wide whitespace-nowrap cursor-pointer"
+            >
+              Get Early Access
+            </button>
+          </form>
+          <p className="text-[11px] text-[#9ca3af] mt-4 leading-relaxed">
+            No spam. We&apos;ll reach out personally when we&apos;re ready
+            for you.
+          </p>
+        </div>
+      </div>
+    </div>
+  );
+}
+
 export default function Home() {
+  if (!LAUNCHED) return <PreLaunchPage />;
+
   return (
     <div className="bg-[#fafaf9] text-[#111110] min-h-screen">
       {/* Nav */}
