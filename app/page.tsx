@@ -308,7 +308,7 @@ export default function Home() {
             {/* Photo */}
             <div className="relative w-full aspect-square sm:aspect-auto sm:h-[320px] overflow-hidden rounded-sm bg-[#e7e5e4] order-first sm:order-last">
               <Image
-                src="/ali.jpg"
+                src="/ali.jpeg"
                 alt="Ali Mirza"
                 fill
                 className="object-cover object-center"
