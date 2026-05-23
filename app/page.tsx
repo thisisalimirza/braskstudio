@@ -269,9 +269,15 @@ export default function Home() {
               I&apos;m Ali. MS3 at UConn, and I&apos;ve been building on the
               web for years. I care maybe too much about pages loading fast and
               designs looking right. I keep my client list small so I can stay
-              focused. The medical school part isn&apos;t a marketing angle. It
-              means I actually understand what healthcare companies are building
-              without needing it explained.
+              focused.
+            </p>
+            <p className="text-[#374151] leading-relaxed text-base sm:text-lg font-light mt-5">
+              The medical school thing isn&apos;t just for healthcare clients. It
+              also means I&apos;m the kind of person you won&apos;t have to
+              explain yourself to twice. If you&apos;ve ever hired someone and
+              spent half the project re-explaining your own business to the
+              person you&apos;re paying, that&apos;s what I&apos;m trying to
+              not be. I pick things up fast. Say it once, I&apos;ve got it.
             </p>
           </div>
         </div>
