@@ -337,7 +337,7 @@ export default function Home() {
           <p className="text-[11px] text-[#9ca3af] uppercase tracking-[0.18em] mb-6">
             about
           </p>
-          <div className="grid grid-cols-1 sm:grid-cols-[1fr_260px] gap-10 sm:gap-20 items-start">
+          <div className="grid grid-cols-1 sm:grid-cols-[1fr_260px] gap-10 sm:gap-16 items-start">
             {/* Text */}
             <div>
               <p className="text-xl sm:text-2xl font-bold tracking-tight mb-8 text-[#111110]">
@@ -370,16 +370,17 @@ export default function Home() {
                 </a>
               </div>
             </div>
-            {/* Photo */}
-            <div className="relative w-full aspect-square sm:aspect-auto sm:h-[320px] overflow-hidden rounded-sm bg-[#e7e5e4] order-first sm:order-last">
-              <Image
-                src="/ali.jpeg"
-                alt="Ali Mirza"
-                fill
-                className="object-cover object-center"
-                sizes="(max-width: 640px) 100vw, 260px"
-              />
-            </div>
+            {/* Photo — grayscale, slight tilt, color on hover */}
+            <div className="order-first sm:order-last flex sm:justify-end">
+              <div className="group relative w-56 sm:w-full aspect-[4/5] overflow-hidden rotate-[-2deg] shadow-[0_8px_32px_rgba(0,0,0,0.12)] bg-[#e7e5e4]">
+                <Image
+                  src="/ali.jpeg"
+                  alt="Ali Mirza"
+                  fill
+                  className="object-cover object-center grayscale group-hover:grayscale-0 transition-all duration-700"
+                  sizes="(max-width: 640px) 100vw, 260px"
+                />
+              </div>
           </div>
         </div>
       </section>
