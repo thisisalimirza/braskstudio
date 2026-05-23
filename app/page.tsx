@@ -69,6 +69,33 @@ const steps = [
   },
 ];
 
+const faqs = [
+  {
+    q: "What do I need to have ready before we start?",
+    a: "Content mostly — copy, brand assets, any photos or screenshots you want to use. I can write short copy if needed, but the faster you get me the raw material, the faster we move. Don't wait until everything's perfect to reach out.",
+  },
+  {
+    q: "What's included in the $3,500?",
+    a: "Design, development, and launch of a full marketing site — typically 4–6 pages. Figma mockups before we build, one round of revisions per page, and hosting setup if you need it. Not included: copywriting from scratch, custom illustrations, or anything outside the agreed scope.",
+  },
+  {
+    q: "Two weeks — is that actually realistic?",
+    a: "Yes, if you show up. The timeline depends on you getting content to me in week 1. If there are delays on your end, the timeline shifts. I'll tell you exactly what I need and when.",
+  },
+  {
+    q: "I'm not in healthcare. Can you still help?",
+    a: "Yes. Healthcare is where I have the deepest background, but the skills transfer. If you're in professional services, early-stage SaaS, or something adjacent, reach out and we'll figure out if there's a fit.",
+  },
+  {
+    q: "What happens after launch?",
+    a: "The site is yours. I can hand over the keys completely, or stay on with a retainer at $400/month for updates and edits. Most clients do a month or two while things settle, then drop off as needed.",
+  },
+  {
+    q: "How does payment work?",
+    a: "50% upfront, 50% on launch. I don't start until the first payment clears.",
+  },
+];
+
 type ProjectCardProps = {
   project: (typeof projects)[number];
   className?: string;
@@ -118,7 +145,7 @@ export default function Home() {
               <a
                 key={label}
                 href={href}
-                className="text-[11px] text-[#9ca3af] hover:text-[#111110] transition-colors"
+                className="text-[11px] text-[#6b7280] hover:text-[#111110] transition-colors"
               >
                 {label}
               </a>
@@ -128,7 +155,7 @@ export default function Home() {
       </nav>
 
       {/* Hero */}
-      <section className="pt-40 pb-24 sm:pt-56 sm:pb-36 px-6 max-w-[1400px] mx-auto">
+      <section className="pt-36 pb-16 sm:pt-52 sm:pb-20 px-6 max-w-[1400px] mx-auto">
         <p className="text-[11px] text-[#9ca3af] uppercase tracking-[0.18em] mb-8">
           Brask Studio.
         </p>
@@ -141,70 +168,62 @@ export default function Home() {
         </p>
         <a
           href="#contact"
-          style={{ color: NAVY }}
-          className="mt-10 sm:mt-12 inline-flex items-center gap-2 text-[11px] transition-opacity hover:opacity-60 tracking-[0.12em] uppercase font-semibold"
+          style={{ backgroundColor: NAVY }}
+          className="mt-10 sm:mt-12 inline-flex items-center gap-2.5 text-white text-xs font-medium px-5 py-2.5 rounded-sm transition-opacity hover:opacity-85"
         >
           Start a project <ArrowRight className="w-3 h-3" />
         </a>
       </section>
 
-      {/* Work — Mosaic Grid */}
+      {/* Work — full-bleed mosaic grid */}
       <section id="work" className="border-t border-[#e7e5e4]">
-        <div className="max-w-[1400px] mx-auto px-6 pt-10 pb-6">
+        <div className="max-w-[1400px] mx-auto px-6 pt-10 pb-5">
           <p className="text-[11px] text-[#9ca3af] uppercase tracking-[0.18em]">
             work
           </p>
         </div>
-        <div className="max-w-[1400px] mx-auto px-6">
-          <div className="grid grid-cols-2 sm:grid-cols-3 sm:[grid-template-rows:300px_300px_300px] gap-0.5">
-            {/* Rounds — wide (col 1–2) */}
-            <ProjectCard
-              project={projects[0]}
-              className="col-span-2 aspect-[3/2] sm:aspect-auto"
-            />
-            {/* Sitr — tall (col 3, rows 1–2) */}
-            <ProjectCard
-              project={projects[1]}
-              className="aspect-[3/2] sm:aspect-auto sm:row-span-2"
-            />
-            {/* Medical Innovation Podcast */}
-            <ProjectCard
-              project={projects[2]}
-              className="aspect-[3/2] sm:aspect-auto"
-            />
-            {/* MD+ */}
-            <ProjectCard
-              project={projects[3]}
-              className="aspect-[3/2] sm:aspect-auto"
-            />
-            {/* Byline — wide (col 1–2) */}
-            <ProjectCard
-              project={projects[4]}
-              className="col-span-2 aspect-[3/2] sm:aspect-auto"
-            />
-            {/* Supertasks */}
-            <ProjectCard
-              project={projects[5]}
-              className="aspect-[3/2] sm:aspect-auto"
-            />
-          </div>
+        {/* No container — intentionally full-bleed */}
+        <div className="grid grid-cols-2 sm:grid-cols-3 sm:[grid-template-rows:300px_300px_300px] gap-0.5">
+          <ProjectCard
+            project={projects[0]}
+            className="col-span-2 aspect-[3/2] sm:aspect-auto"
+          />
+          <ProjectCard
+            project={projects[1]}
+            className="aspect-[3/2] sm:aspect-auto sm:row-span-2"
+          />
+          <ProjectCard
+            project={projects[2]}
+            className="aspect-[3/2] sm:aspect-auto"
+          />
+          <ProjectCard
+            project={projects[3]}
+            className="aspect-[3/2] sm:aspect-auto"
+          />
+          <ProjectCard
+            project={projects[4]}
+            className="col-span-2 aspect-[3/2] sm:aspect-auto"
+          />
+          <ProjectCard
+            project={projects[5]}
+            className="aspect-[3/2] sm:aspect-auto"
+          />
         </div>
-        <div className="max-w-[1400px] mx-auto px-6 pb-10" />
       </section>
 
-      {/* How It Works */}
+      {/* How It Works + Pricing (combined) */}
       <section
         id="process"
-        className="py-20 sm:py-28 px-6 border-t border-[#e7e5e4]"
+        className="py-14 sm:py-20 px-6 border-t border-[#e7e5e4]"
       >
         <div className="max-w-[1400px] mx-auto">
-          <p className="text-[11px] text-[#9ca3af] uppercase tracking-[0.18em] mb-12">
+          <p className="text-[11px] text-[#9ca3af] uppercase tracking-[0.18em] mb-10">
             how it works
           </p>
-          <div className="grid grid-cols-1 sm:grid-cols-3 gap-10 sm:gap-12 mb-10">
+          <div className="grid grid-cols-1 sm:grid-cols-3 gap-8 sm:gap-12 mb-8">
             {steps.map((step, i) => (
               <div key={step.week}>
-                <div className="flex items-center gap-3 mb-4">
+                <div className="flex items-center gap-3 mb-3">
                   <span
                     className="w-5 h-5 rounded-full text-white text-[10px] flex items-center justify-center font-semibold flex-shrink-0"
                     style={{ backgroundColor: NAVY }}
@@ -224,27 +243,22 @@ export default function Home() {
               </div>
             ))}
           </div>
-          <p className="text-xs text-[#6b7280] border-t border-[#e7e5e4] pt-6 leading-relaxed max-w-2xl">
-            No hidden fees. Scope is set before we start. There's a real launch
-            date you can plan around.
+          <p className="text-xs text-[#6b7280] border-t border-[#e7e5e4] pt-6 leading-relaxed">
+            No hidden fees. Scope is set before we start. There&apos;s a real
+            launch date you can plan around.
           </p>
-        </div>
-      </section>
 
-      {/* Pricing */}
-      <section
-        id="pricing"
-        className="py-20 sm:py-28 px-6 border-t border-[#e7e5e4]"
-      >
-        <div className="max-w-[1400px] mx-auto">
-          <p className="text-[11px] text-[#9ca3af] uppercase tracking-[0.18em] mb-12">
-            pricing
-          </p>
-          <div className="max-w-xl">
-            <p className="text-2xl sm:text-3xl font-bold tracking-tight mb-5 text-[#111110]">
-              Projects start at $3,500.
-            </p>
-            <p className="text-[#374151] leading-relaxed text-base sm:text-lg font-light">
+          {/* Pricing — folded in */}
+          <div className="mt-12 pt-12 border-t border-[#e7e5e4] grid grid-cols-1 sm:grid-cols-2 gap-6 sm:gap-16 items-start">
+            <div>
+              <p className="text-[11px] text-[#9ca3af] uppercase tracking-[0.18em] mb-5">
+                pricing
+              </p>
+              <p className="text-2xl sm:text-3xl font-bold tracking-tight text-[#111110]">
+                Projects start at $3,500.
+              </p>
+            </div>
+            <p className="text-[#374151] leading-relaxed sm:pt-9 font-light">
               Retainers from $400/month. Rush delivery available. One price,
               one scope, two weeks from kickoff to launch. No tiers.
             </p>
@@ -255,25 +269,25 @@ export default function Home() {
       {/* About */}
       <section
         id="about"
-        className="py-20 sm:py-28 px-6 border-t border-[#e7e5e4]"
+        className="py-14 sm:py-20 px-6 border-t border-[#e7e5e4]"
       >
         <div className="max-w-[1400px] mx-auto">
           <p className="text-[11px] text-[#9ca3af] uppercase tracking-[0.18em] mb-6">
             about
           </p>
-          <p className="text-xl sm:text-2xl font-bold tracking-tight mb-10 text-[#111110]">
+          <p className="text-xl sm:text-2xl font-bold tracking-tight mb-8 text-[#111110]">
             Domain expertise matters.
           </p>
-          <div className="max-w-2xl">
+          <div className="max-w-2xl space-y-5">
             <p className="text-[#374151] leading-relaxed text-base sm:text-lg font-light">
               I&apos;m Ali. MS3 at UConn, and I&apos;ve been building on the
               web for years. I care maybe too much about pages loading fast and
               designs looking right. I keep my client list small so I can stay
               focused.
             </p>
-            <p className="text-[#374151] leading-relaxed text-base sm:text-lg font-light mt-5">
-              The medical school thing isn&apos;t just for healthcare clients. It
-              also means I&apos;m the kind of person you won&apos;t have to
+            <p className="text-[#374151] leading-relaxed text-base sm:text-lg font-light">
+              The medical school thing isn&apos;t just for healthcare clients.
+              It also means I&apos;m the kind of person you won&apos;t have to
               explain yourself to twice. If you&apos;ve ever hired someone and
               spent half the project re-explaining your own business to the
               person you&apos;re paying, that&apos;s what I&apos;m trying to
@@ -283,13 +297,35 @@ export default function Home() {
         </div>
       </section>
 
+      {/* FAQ */}
+      <section id="faq" className="py-14 sm:py-20 px-6 border-t border-[#e7e5e4]">
+        <div className="max-w-[1400px] mx-auto">
+          <p className="text-[11px] text-[#9ca3af] uppercase tracking-[0.18em] mb-10">
+            common questions
+          </p>
+          <div className="divide-y divide-[#e7e5e4]">
+            {faqs.map(({ q, a }) => (
+              <div
+                key={q}
+                className="grid grid-cols-1 sm:grid-cols-2 gap-2 sm:gap-16 py-6"
+              >
+                <p className="text-sm font-semibold text-[#111110] leading-snug">
+                  {q}
+                </p>
+                <p className="text-sm text-[#374151] leading-relaxed">{a}</p>
+              </div>
+            ))}
+          </div>
+        </div>
+      </section>
+
       {/* Contact */}
       <section
         id="contact"
-        className="py-20 sm:py-28 px-6 border-t border-[#e7e5e4]"
+        className="py-14 sm:py-20 px-6 border-t border-[#e7e5e4]"
       >
         <div className="max-w-[1400px] mx-auto">
-          <div className="grid grid-cols-1 sm:grid-cols-2 gap-16 sm:gap-24">
+          <div className="grid grid-cols-1 sm:grid-cols-2 gap-14 sm:gap-24">
             {/* Left */}
             <div>
               <p className="text-[11px] text-[#9ca3af] uppercase tracking-[0.18em] mb-6">
@@ -370,15 +406,17 @@ export default function Home() {
             © {new Date().getFullYear()} Brask Studio
           </span>
           <div className="hidden sm:flex items-center gap-6">
-            {["home", "work", "process", "about", "contact"].map((link) => (
-              <a
-                key={link}
-                href={link === "home" ? "#" : `#${link}`}
-                className="text-[11px] text-[#9ca3af] hover:text-[#6b7280] transition-colors"
-              >
-                {link}
-              </a>
-            ))}
+            {["home", "work", "process", "about", "faq", "contact"].map(
+              (link) => (
+                <a
+                  key={link}
+                  href={link === "home" ? "#" : `#${link}`}
+                  className="text-[11px] text-[#9ca3af] hover:text-[#6b7280] transition-colors"
+                >
+                  {link}
+                </a>
+              )
+            )}
           </div>
         </div>
       </footer>
