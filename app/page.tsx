@@ -1,6 +1,8 @@
 import Image from "next/image";
 import { ArrowRight } from "lucide-react";
 import { LAUNCHED } from "./config";
+import WaitlistForm from "./WaitlistForm";
+import ContactForm from "./ContactForm";
 
 const NAVY = "#0F1B2D";
 
@@ -157,27 +159,7 @@ function PreLaunchPage() {
             flat rate.
           </p>
           {/* Inline email form */}
-          <form
-            id="waitlist"
-            action="https://formspree.io/f/mojbnepl"
-            method="POST"
-            className="flex items-stretch border border-[#e7e5e4] max-w-md mx-auto"
-          >
-            <input
-              type="email"
-              name="email"
-              required
-              placeholder="Enter your email"
-              className="flex-1 min-w-0 px-4 py-3 text-sm bg-white text-[#111110] placeholder-[#9ca3af] focus:outline-none focus:ring-0"
-            />
-            <button
-              type="submit"
-              style={{ backgroundColor: NAVY }}
-              className="flex-shrink-0 px-5 py-3 text-[11px] font-medium text-white hover:opacity-85 transition-opacity tracking-wide whitespace-nowrap cursor-pointer"
-            >
-              Get Early Access
-            </button>
-          </form>
+          <WaitlistForm />
           <p className="text-[11px] text-[#9ca3af] mt-4 leading-relaxed">
             No spam. We&apos;ll reach out personally when we&apos;re ready
             for you.
@@ -441,48 +423,7 @@ export default function Home() {
             </div>
             {/* Right — form */}
             <div>
-              <form
-                action="https://formspree.io/f/mojbnepl"
-                method="POST"
-                className="space-y-0"
-              >
-                <input
-                  type="text"
-                  name="name"
-                  required
-                  placeholder="your name"
-                  className="w-full px-0 py-4 text-sm bg-transparent border-0 border-b border-[#e7e5e4] text-[#111110] placeholder-[#9ca3af] focus:outline-none focus:border-[#0F1B2D] transition-colors"
-                />
-                <input
-                  type="email"
-                  name="email"
-                  required
-                  placeholder="email address"
-                  className="w-full px-0 py-4 text-sm bg-transparent border-0 border-b border-[#e7e5e4] text-[#111110] placeholder-[#9ca3af] focus:outline-none focus:border-[#0F1B2D] transition-colors"
-                />
-                <input
-                  type="text"
-                  name="company"
-                  placeholder="company"
-                  className="w-full px-0 py-4 text-sm bg-transparent border-0 border-b border-[#e7e5e4] text-[#111110] placeholder-[#9ca3af] focus:outline-none focus:border-[#0F1B2D] transition-colors"
-                />
-                <textarea
-                  name="message"
-                  required
-                  rows={3}
-                  placeholder="your idea, timeline, and anything else we should know."
-                  className="w-full px-0 py-4 text-sm bg-transparent border-0 border-b border-[#e7e5e4] text-[#111110] placeholder-[#9ca3af] focus:outline-none focus:border-[#0F1B2D] transition-colors resize-none"
-                />
-                <div className="pt-6">
-                  <button
-                    type="submit"
-                    style={{ backgroundColor: NAVY }}
-                    className="inline-flex items-center gap-2 px-5 py-2.5 text-xs font-medium text-white hover:opacity-85 transition-opacity tracking-wide rounded-sm cursor-pointer"
-                  >
-                    submit →
-                  </button>
-                </div>
-              </form>
+              <ContactForm />
             </div>
           </div>
         </div>
