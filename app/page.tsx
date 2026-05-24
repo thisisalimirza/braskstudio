@@ -159,7 +159,7 @@ function PreLaunchPage() {
           {/* Inline email form */}
           <form
             id="waitlist"
-            action="https://formspree.io/f/placeholder"
+            action="https://formspree.io/f/mojbnepl"
             method="POST"
             className="flex items-stretch border border-[#e7e5e4] max-w-md mx-auto"
           >
@@ -442,7 +442,7 @@ export default function Home() {
             {/* Right — form */}
             <div>
               <form
-                action="https://formspree.io/f/placeholder"
+                action="https://formspree.io/f/mojbnepl"
                 method="POST"
                 className="space-y-0"
               >
