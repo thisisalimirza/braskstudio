@@ -302,7 +302,7 @@ export default function Home() {
           <p className="text-[11px] text-[#9ca3af] uppercase tracking-[0.18em] mb-6">
             about
           </p>
-          <div className="grid grid-cols-1 sm:grid-cols-[1fr_260px] gap-10 sm:gap-16 items-start">
+          <div className="grid grid-cols-1 sm:grid-cols-[1fr_260px] gap-10 sm:gap-16 items-center">
             {/* Text */}
             <div>
               <p className="text-xl sm:text-2xl font-bold tracking-tight mb-8 text-[#111110]">
@@ -337,7 +337,7 @@ export default function Home() {
             </div>
             {/* Photo — grayscale, slight tilt, color on hover */}
             <div className="order-first sm:order-last flex sm:justify-end">
-              <div className="group relative w-56 sm:w-full aspect-[4/5] overflow-hidden rotate-[-2deg] shadow-[0_8px_32px_rgba(0,0,0,0.12)] bg-[#e7e5e4]">
+              <div className="group relative w-56 sm:w-full aspect-[4/5] overflow-hidden shadow-[0_8px_32px_rgba(0,0,0,0.12)] bg-[#e7e5e4]">
                 <Image
                   src="/ali.jpeg"
                   alt="Ali Mirza"
