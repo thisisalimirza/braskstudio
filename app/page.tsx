@@ -10,7 +10,7 @@ const projects = [
   {
     name: "Rounds",
     description:
-      "Clinical reasoning platform used at 40+ medical schools. Designed around how physicians actually move through a case.",
+      "Clinical reasoning platform used by 40+ medical schools across the US. Built for the workflows real clinicians actually use.",
     url: "https://getrounds.app",
     label: "Healthcare SaaS",
     image: "/portfolio/rounds.jpeg",
@@ -18,7 +18,7 @@ const projects = [
   {
     name: "Sitr",
     description:
-      "Replaced the spreadsheets medical schools relied on for seating. Handles hundreds of students per event.",
+      "Replaced manual spreadsheets with a real-time seating platform built for high-stakes medical school events at scale.",
     url: "https://usesitr.com",
     label: "Healthcare SaaS",
     image: "/portfolio/sitr.jpeg",
@@ -26,7 +26,7 @@ const projects = [
   {
     name: "Medical Innovation Podcast",
     description:
-      "Brand and site for a podcast with practicing physicians and healthcare founders as guests. Looks like it belongs.",
+      "Built a brand and web presence that matches the credibility of the guests — physicians, founders, and researchers.",
     url: "https://medicalinnovationpod.com/",
     label: "Media",
     image: "/portfolio/medicalinnovationpodcast.png",
@@ -34,7 +34,7 @@ const projects = [
   {
     name: "MD+",
     description:
-      "Brand system and platform for 5,000 medical students and physicians building things on the side.",
+      "Built a scalable identity and platform for a 5,000-member community of medical student and physician-innovators.",
     url: "https://mdplus-nine.vercel.app/",
     label: "Healthcare Community",
     image: "/portfolio/mdplus.png",
@@ -42,7 +42,7 @@ const projects = [
   {
     name: "Byline",
     description:
-      "Publishing platform for writers who'd rather own their audience than rent it from an algorithm.",
+      "Clean publishing platform for writers who want to own their audience — no algorithm, no middleman.",
     url: "https://bylineblogs.com/",
     label: "SaaS",
     image: "/portfolio/byline.jpeg",
@@ -50,7 +50,7 @@ const projects = [
   {
     name: "Supertasks",
     description:
-      "Task manager with nothing extra. For founders who already know what they need to do.",
+      "Task management stripped to its core. Built for founders who need focus, not another feature list.",
     url: "https://supertasks-app.vercel.app/",
     label: "Productivity",
     image: "/portfolio/Supertasks.png",
@@ -101,28 +101,33 @@ const faqs = [
 
 type ProjectCardProps = {
   project: (typeof projects)[number];
-  className?: string;
 };
 
-function ProjectCard({ project, className = "" }: ProjectCardProps) {
+function ProjectCard({ project }: ProjectCardProps) {
   return (
     <a
       href={project.url}
       target="_blank"
       rel="noopener noreferrer"
-      className={`relative overflow-hidden group ${className}`}
+      className="group block border border-[#e7e5e4] rounded-lg overflow-hidden hover:border-[#d1cfcd] transition-colors"
     >
-      <Image
-        src={project.image}
-        alt={project.name}
-        fill
-        className="object-cover object-top transition-transform duration-700 group-hover:scale-[1.04]"
-        sizes="(max-width: 640px) 100vw, (max-width: 1024px) 50vw, 33vw"
-      />
-      <div className="absolute inset-0 bg-gradient-to-t from-black/70 via-black/10 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300" />
-      <div className="absolute bottom-0 left-0 p-5 translate-y-2 opacity-0 group-hover:translate-y-0 group-hover:opacity-100 transition-all duration-300">
-        <p className="text-white text-sm font-semibold mb-0.5">{project.name}</p>
-        <p className="text-white/60 text-xs">{project.label}</p>
+      <div className="relative aspect-[16/9] overflow-hidden bg-[#f3f2f1]">
+        <Image
+          src={project.image}
+          alt={project.name}
+          fill
+          className="object-cover object-top transition-transform duration-700 group-hover:scale-[1.03]"
+          sizes="(max-width: 640px) 100vw, 50vw"
+        />
+      </div>
+      <div className="px-4 py-3.5">
+        <div className="flex items-center justify-between mb-1.5">
+          <p className="text-sm font-semibold text-[#111110]">{project.name}</p>
+          <span className="text-[11px] text-[#9ca3af] border border-[#e7e5e4] px-2 py-0.5 rounded-full whitespace-nowrap">
+            {project.label}
+          </span>
+        </div>
+        <p className="text-[13px] text-[#6b7280] leading-relaxed">{project.description}</p>
       </div>
     </a>
   );
@@ -219,39 +224,17 @@ export default function Home() {
         </a>
       </section>
 
-      {/* Work — full-bleed mosaic grid */}
-      <section id="work" className="border-t border-[#e7e5e4]">
-        <div className="max-w-[1400px] mx-auto px-6 pt-10 pb-5">
-          <p className="text-[11px] text-[#9ca3af] uppercase tracking-[0.18em]">
+      {/* Work */}
+      <section id="work" className="border-t border-[#e7e5e4] py-14 sm:py-20 px-6">
+        <div className="max-w-[1400px] mx-auto">
+          <p className="text-[11px] text-[#9ca3af] uppercase tracking-[0.18em] mb-8">
             work
           </p>
-        </div>
-        {/* No container — intentionally full-bleed */}
-        <div className="grid grid-cols-2 sm:grid-cols-3 sm:[grid-template-rows:300px_300px_300px] gap-0.5">
-          <ProjectCard
-            project={projects[0]}
-            className="col-span-2 aspect-[3/2] sm:aspect-auto"
-          />
-          <ProjectCard
-            project={projects[1]}
-            className="aspect-[3/2] sm:aspect-auto sm:row-span-2"
-          />
-          <ProjectCard
-            project={projects[2]}
-            className="aspect-[3/2] sm:aspect-auto"
-          />
-          <ProjectCard
-            project={projects[3]}
-            className="aspect-[3/2] sm:aspect-auto"
-          />
-          <ProjectCard
-            project={projects[4]}
-            className="col-span-2 aspect-[3/2] sm:aspect-auto"
-          />
-          <ProjectCard
-            project={projects[5]}
-            className="aspect-[3/2] sm:aspect-auto"
-          />
+          <div className="grid grid-cols-1 sm:grid-cols-2 gap-5">
+            {projects.map((project) => (
+              <ProjectCard key={project.name} project={project} />
+            ))}
+          </div>
         </div>
       </section>
 
