@@ -112,25 +112,6 @@ export default function MDPlusCaseStudy() {
         </div>
       </section>
 
-      {/* Hero image — "After" */}
-      <section className="px-6 pb-16 sm:pb-24">
-        <div className="max-w-[1400px] mx-auto">
-          <div className="relative w-full rounded-lg overflow-hidden border border-[#e7e5e4] bg-[#f3f2f1]">
-            <Image
-              src="/case-studies/mdplus/after.png"
-              alt="MD+ website after redesign"
-              width={1400}
-              height={788}
-              className="w-full h-auto"
-              priority
-            />
-          </div>
-          <p className="text-[11px] text-[#9ca3af] mt-3 text-center tracking-wide">
-            The live MD+ website — after
-          </p>
-        </div>
-      </section>
-
       {/* The Problem */}
       <section className="border-t border-[#e7e5e4] py-14 sm:py-24 px-6">
         <div className="max-w-[1400px] mx-auto">
@@ -259,6 +240,7 @@ export default function MDPlusCaseStudy() {
                   width={700}
                   height={394}
                   className="w-full h-auto"
+                  priority
                 />
               </div>
               <p className="text-[11px] text-[#9ca3af] mt-3 tracking-wide">
