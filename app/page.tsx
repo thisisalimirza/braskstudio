@@ -1,4 +1,5 @@
 import Image from "next/image";
+import Link from "next/link";
 import { ArrowRight } from "lucide-react";
 import { LAUNCHED } from "./config";
 import WaitlistForm from "./WaitlistForm";
@@ -35,9 +36,10 @@ const projects = [
     name: "MD+",
     description:
       "Built a scalable identity and platform for a 5,000-member community of medical student and physician-innovators.",
-    url: "https://mdplus-nine.vercel.app/",
+    url: "/work/mdplus",
     label: "Healthcare Community",
     image: "/portfolio/mdplus.png",
+    internal: true,
   },
   {
     name: "Byline",
@@ -104,13 +106,8 @@ type ProjectCardProps = {
 };
 
 function ProjectCard({ project }: ProjectCardProps) {
-  return (
-    <a
-      href={project.url}
-      target="_blank"
-      rel="noopener noreferrer"
-      className="group block border border-[#e7e5e4] rounded-lg overflow-hidden hover:border-[#d1cfcd] transition-colors"
-    >
+  const inner = (
+    <>
       <div className="relative aspect-[16/9] overflow-hidden bg-[#f3f2f1]">
         <Image
           src={project.image}
@@ -129,6 +126,28 @@ function ProjectCard({ project }: ProjectCardProps) {
         </div>
         <p className="text-[13px] text-[#6b7280] leading-relaxed">{project.description}</p>
       </div>
+    </>
+  );
+
+  if ("internal" in project && project.internal) {
+    return (
+      <Link
+        href={project.url}
+        className="group block border border-[#e7e5e4] rounded-lg overflow-hidden hover:border-[#d1cfcd] transition-colors"
+      >
+        {inner}
+      </Link>
+    );
+  }
+
+  return (
+    <a
+      href={project.url}
+      target="_blank"
+      rel="noopener noreferrer"
+      className="group block border border-[#e7e5e4] rounded-lg overflow-hidden hover:border-[#d1cfcd] transition-colors"
+    >
+      {inner}
     </a>
   );
 }
